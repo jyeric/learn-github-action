@@ -20,3 +20,17 @@ jobs:
           name: hello-world
           path: main
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Windows-hello-world-release:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: compile main.cpp
+        run: g++ ${{ github.workspace }}\\main.cpp -o ${{ github.workspace }}\\main.exe
+      - name: run main
+        run: ${{ github.workspace }}\\main.exe
+      - uses: actions/upload-artifact@v3
+        with:
+          name: hello-world
+          path: ${{ github.workspace }}\\main.exe
+      - run: echo "🍏 This job's status is ${{ job.status }}."
