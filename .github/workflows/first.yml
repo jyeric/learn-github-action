@@ -1,7 +1,7 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-  Ubuntu hello world release:
+  Ubuntu-hello-world-release:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
