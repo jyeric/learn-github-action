@@ -10,7 +10,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: Get C++ environment
-        run: apt-get install g++ -y
+        run: sudo apt-get install g++ -y
       - name: compile main.cpp
         run: g++ ${{ github.workspace }}/main.cpp -o main
       - run: echo "🍏 This job's status is ${{ job.status }}."
