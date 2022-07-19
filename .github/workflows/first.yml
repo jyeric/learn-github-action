@@ -13,4 +13,6 @@ jobs:
         run: sudo apt-get install g++ -y
       - name: compile main.cpp
         run: g++ ${{ github.workspace }}/main.cpp -o main
+      - name: run main
+        run: ./${{ github.workspace }}/main
       - run: echo "🍏 This job's status is ${{ job.status }}."
