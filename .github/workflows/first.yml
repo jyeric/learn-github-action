@@ -14,5 +14,5 @@ jobs:
       - name: compile main.cpp
         run: g++ ${{ github.workspace }}/main.cpp -o main
       - name: run main
-        run: ./${{ github.workspace }}/main
+        run: ./main
       - run: echo "🍏 This job's status is ${{ job.status }}."
